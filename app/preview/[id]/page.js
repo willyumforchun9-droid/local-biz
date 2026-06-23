@@ -6,22 +6,17 @@ const supabase = createClient(
 )
 
 export default async function PreviewPage({ params }) {
-  const id = params.id
-  
+  const { id } = await params
+
   const { data, error } = await supabase
     .from('websites')
     .select('*')
     .eq('id', id)
     .single()
 
-  console.log('ID:', id)
-  console.log('Data:', data)
-  console.log('Error:', error)
-
   if (!data) return (
     <div style={{ padding: 40, fontFamily: 'Arial' }}>
       <h1>Website not found</h1>
-      <p>ID: {id}</p>
       <p>Error: {JSON.stringify(error)}</p>
     </div>
   )
