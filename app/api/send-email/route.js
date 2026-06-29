@@ -6,7 +6,7 @@ export async function POST(request) {
   const { businessName, businessEmail, previewUrl } = await request.json()
 
   const { data, error } = await resend.emails.send({
-    from: 'Your Name <onboarding@resend.dev>',
+    from: 'Willy <hello@getabizzsite.com>',
     to: businessEmail,
     subject: `I built a free website for ${businessName}`,
     html: `
