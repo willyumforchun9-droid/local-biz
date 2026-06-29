@@ -29,8 +29,8 @@ export async function POST(request) {
         </p>
         <p style="font-size: 16px; color: #444;">
           Best,<br/>
-          <strong>Your Name</strong><br/>
-          Your Phone Number
+          <strong>Will</strong><br/>
+          410-733-9015
         </p>
       </div>
     `
